@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import DisplayEntries from "./Components/DisplayEntries";
-import AddEntry from "./Components/AddEntryForm";
 import EntriesChartTracker from "./Components/EntriesChartTracker";
 import AddEntryForm from "./Components/AddEntryForm";
 
@@ -15,10 +14,16 @@ function App() {
     }
 
     return (
-        <div>
-            <DisplayEntries entries={entries} />
-            <AddEntryForm addNewEntry={addNewEntry} />
-            <EntriesChartTracker entries={entries} />
+        <div className="container-fluid">
+            <div className="row">
+                <div className="col-md-6">
+                    <DisplayEntries entries={entries} />
+                    <AddEntryForm addNewEntry={addNewEntry} />
+                </div>
+                <div className="col-md-6">
+                    <EntriesChartTracker entries={entries} />
+                </div>
+            </div>
         </div>
     );
 }
