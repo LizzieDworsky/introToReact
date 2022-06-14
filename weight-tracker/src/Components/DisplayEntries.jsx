@@ -1,6 +1,6 @@
 const DisplayEntries = ({ entries }) => {
     return (
-        <table>
+        <table className="table">
             <thead>
                 <tr>
                     <th>Entry Number</th>
